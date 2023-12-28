@@ -23,6 +23,8 @@ export const dynamic = 'force-dynamic'
 // import Categories from '../../_components/Categories'
 // import Promotion from '../../_components/Promotion'
 
+import Categories from '../../_components/Categories'
+
 import classes from './index.module.scss'
 
 export default async function Page({ params: { slug = 'home' } }) {
@@ -64,8 +66,8 @@ export default async function Page({ params: { slug = 'home' } }) {
       {slug === 'home' ? (
         <Gutter className={classes.home}>
           <Hero {...hero} />
-          {/* <Categories categories={categories} />
-            <Promotion /> */}
+          <Categories categories={categories} />
+          {/* <Promotion /> */}
         </Gutter>
       ) : (
         <>
